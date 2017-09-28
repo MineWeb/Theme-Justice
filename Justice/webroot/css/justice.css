@@ -1,0 +1,273 @@
+/******
+Ce fichier fait partie du thème "Justice"
+développé par Alexandre S. aka MrSheepSheep
+
+Vous n'êtes pas autorisé à utiliser ce CSS
+si vous n'avez pas acheté le thème sur le
+market de Mineweb.
+******/
+
+html {
+	background-color: #efefef;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.topbar {
+    padding: 30px 0 15px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    border-bottom: 5px solid #ba2222;
+}
+
+.topbar .navbar {
+    background-color: transparent;
+    border: none;
+}
+
+/* Custom Navbar */
+.navbar-nav a {
+    color: white !important;
+    border-bottom: 5px solid transparent;
+    transition: all 0.5s;
+    margin: 0 10px;
+    font-family: 'Oswald' sans-serif;
+    font-size: 17px;
+}
+
+.navbar-nav a:hover, .navbar-nav a:focus {
+    color: inherit;
+    border-bottom: 5px solid #ba2222;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: inherit !important;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    margin-top: 5px;
+}
+
+.navbar-nav .dropdown li a {
+    color: darkslategray !important;
+    font-family: inherit;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+
+.header {
+    padding: 50px 0;
+    width: 100%;
+    background-color: black;
+}
+
+.servstats {
+    margin-top: 5%;
+}
+
+.server-status {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+}
+
+.server-ip {
+    display: block;
+    color: whitesmoke;
+    font-size: 25px;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.server-ip p {
+	display: inline-block;
+}
+
+.online {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+}
+
+.blackbox {
+    background-color: rgba(44, 44, 44, 0.87);
+    margin-bottom: 10px;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.login-avatar {
+    width: 64px;
+    display: inline-block;
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
+    padding-right: 10px;
+    position: absolute;
+}
+
+.login-username {
+    display: block;
+    color: whitesmoke;
+    font-size: 25px;
+    padding: 8px;
+    text-align: center;
+    margin-left: 64px;
+}
+
+.quickbuttons {
+    background-color: rgba(44, 44, 44, 0.87);
+    padding: 5px;
+    width: 100%;
+}
+
+.quickbuttons a {
+    background: none;
+    border: none;
+    color: whitesmoke;
+    border-radius: 0;
+    transition: 0.5s all;
+}
+
+.quickbuttons a:hover {
+    background-color: #ba2222;
+    color: whitesmoke;
+}
+.main-content {
+    padding: 20px 0;
+    background-color: #efefef;
+}
+
+/* CUSTOM PANELS */
+.panel {
+    border: none;
+    border-radius: 0;
+}
+
+.panel-heading, .panel-footer {
+    background-color: white !important;
+    border-radius: 0;
+    border: none;
+}
+
+.panel-footer {
+    background-color: #fafafa !important;
+}
+
+.panel-title {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 7px;
+}
+
+.panel-body {
+    padding-top: 5px;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+/* CUSTOM BUTTONS */
+
+.btn {
+    border: none;
+    border-radius: 0;
+    transition: 0.5s;
+}
+
+.btn-custom {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+
+.copyright {
+    color: grey;
+    position: relative;
+}
+.textslide {
+    margin-top: 40px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.textslide ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.textslide ul li p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+/* Alertes */
+
+.alert {
+    border-radius: 0;
+    border-width: 3px;
+    background-color: white;
+}
+
+/* Modals */
+
+.modal-content {
+    border-radius: 0;
+}
+
+/* Inputs */
+input {
+    border-radius: 0px !important;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		z-index: 0;
+}
+
+#loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #222;
+	z-index: 1000;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.forum-forum {
+	z-index: 100;
+}
