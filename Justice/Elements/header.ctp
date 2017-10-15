@@ -7,7 +7,7 @@
             <div class="blackbox">
                 <span class="online">
 									<?php if($banner_server): ?>
-                    <?= $server_infos['getPlayerCount'] ?>  joueurs en ligne
+                    <?= $banner_server; ?>
 									<?php else: ?>
 									  <?= $Lang->get('SERVER__STATUS_OFF'); ?>
 									<?php endif; ?>
@@ -33,7 +33,7 @@
             </div>
             <?php } else { ?>
                 <div class="blackbox">
-                    <img class="login-avatar avatar img-responsive" src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin/', 'plugin' => false)) ?>/<?= $user['pseudo'] ?>">
+                    <img class="login-avatar avatar img-responsive" src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin', 'plugin' => false, $user['pseudo'], 64)) ?>">
                     <div class="login-username"><?= $user['pseudo'] ?></div>
                 </div>
                 <div class="quickbuttons">
