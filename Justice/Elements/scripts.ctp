@@ -18,6 +18,7 @@ $(function($) {
         arrows: false,
         autoplay: true,
         animation: '<?= $theme_config['unslider-animation']; ?>',
+			  delay: 5000,
         animateHeight: false
     });
     <?php if($theme_config['particles-enabled'] == "true"): ?>
