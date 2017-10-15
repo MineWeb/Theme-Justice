@@ -1,4 +1,5 @@
-<div class="panel panel-default">
+<div class="container">
+	<div class="panel panel-default">
     <div class="panel-heading">
         <h1 class="panel-title"><?= $Lang->get('SHOP__STARPASS_PAYMENT') ?></h1>
     </div>

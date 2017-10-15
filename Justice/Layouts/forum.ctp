@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,14 +15,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.3.1/vegas.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
-    <?= $this->Html->css('justice.css') ?>
-		<?= $this->element('dynamic-css') ?>
+    <?= $this->Html->css('justice.css'); ?>
+		<?= $this->element('dynamic-css'); ?>
     <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body>
     <div id="particles-js"></div>
@@ -35,17 +33,20 @@
     <!-- Navbar -->
     <?= $this->element('navbar') ?>
     <!-- Header -->
-		<?= $this->element('header') ?>
+    <?= $this->element('header') ?>
+
     <!-- Main body -->
     <div class="main-content">
+			<div class="container">
+				<?= $this->fetch('content') ?>
+			</div>
         <div class="container">
-						<?= $this->fetch('content') ?>
-						<div class="text-centered copyright">
-										Fièrement propulsé par <a href="http://mineweb.org/">Mineweb</a>.<br>
-										Thème <a href="http://mineweb.org/market/theme/Justice">Justice</a> développé par MrSheepSheep.
-										<br>
-										<?= $theme_config['footer_text']; ?>
-						</div>
+            <div class="text-centered copyright">
+                Fièrement propulsé par <a href="http://mineweb.org/">Mineweb</a>.<br>
+                Thème <a href="http://mineweb.org/market/theme/Justice">Justice</a> développé par MrSheepSheep.
+                <br>
+                <?= $theme_config['footer_text']; ?>
+            </div>
         </div>
     </div>
     <!-- Scripts -->

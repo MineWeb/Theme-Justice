@@ -1,37 +1,44 @@
-  <div class="panel panel-default">
-    <div class="panel-heading"><h1 class="panel-title"><i class="fa fa-gift"></i> <?= $Lang->get('SHOP__TITLE'); ?></h1></div>
-    <div class="panel-body">
-      <!-- Catégories -->
-      <?php
-      $i = 0;
-      foreach ($search_categories as $k => $v) {
-        $i++;
-      ?>
-          <a href="<?= $this->Html->url(array('controller' => 'c/'.$v['Category']['id'], 'plugin' => 'shop')) ?>" class="btn btn-info shop-category <?= (isset($category) AND $v['Category']['id'] == $category OR !isset($category) AND $i == 1) ? ' active' : ''; ?>"><?= before_display($v['Category']['name']) ?></a>
-      <?php } ?>
-        <hr>
-      <?= $vouchers->get_vouchers() ?>
-        <?php
-        $col = 6;
-        $i = 0;
-        foreach ($search_items as $k => $v) {
-          if(!isset($category) AND $v['Item']['category'] == $search_first_category OR isset($category) AND $v['Item']['category'] == $category) {
-            $i++;
-        ?>
-              <div class="col-sm-<?= $col ?> col-lg-<?= $col ?> col-md-<?= $col ?>">
-                  <div class="thumbnail">
-                      <center><h1><?= before_display($v['Item']['name']) ?></h1></center>
-                      <?php if(isset($v['Item']['img_url'])) { ?><img class="img-responsive" style="max-height:200px; min-height:200px;" src="<?= $v['Item']['img_url'] ?>" alt=""><?php } ?>
-                      <div class="caption" style="height:auto;">
-                          <center><h1><?= $v['Item']['price'] ?><?php if($v['Item']['price'] == 1) { echo  ' '.$singular_money; } else { echo  ' '.$plural_money; } ?></h1></center>
-                          <?php if($isConnected AND $Permissions->can('CAN_BUY')) { ?><button class="display-item btn btn-success btn-block btn-lg" data-item-id="<?= $v['Item']['id'] ?>"><?= $Lang->get('SHOP__BUY') ?></button> <?php } ?>
-                      </div>
-                  </div>
-              </div>
-          <?php } ?>
-        <?php } ?>
-    </div>
-  </div>
+<div class="container">
+	<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h1 class="panel-title"><i class="fa fa-gift"></i> <?= $Lang->get('SHOP__TITLE'); ?></h1></div>
+			<div class="panel-body">
+				<!-- Catégories -->
+				<?php
+				$i = 0;
+				foreach ($search_categories as $k => $v) {
+					$i++;
+				?>
+						<a href="<?= $this->Html->url(array('controller' => 'c/'.$v['Category']['id'], 'plugin' => 'shop')) ?>" class="btn btn-info shop-category <?= (isset($category) AND $v['Category']['id'] == $category OR !isset($category) AND $i == 1) ? ' active' : ''; ?>"><?= before_display($v['Category']['name']) ?></a>
+				<?php } ?>
+					<hr>
+				<?= $vouchers->get_vouchers() ?>
+					<?php
+					$col = 6;
+					$i = 0;
+					foreach ($search_items as $k => $v) {
+						if(!isset($category) AND $v['Item']['category'] == $search_first_category OR isset($category) AND $v['Item']['category'] == $category) {
+							$i++;
+					?>
+								<div class="col-sm-<?= $col ?> col-lg-<?= $col ?> col-md-<?= $col ?>">
+										<div class="thumbnail">
+												<center><h1><?= before_display($v['Item']['name']) ?></h1></center>
+												<?php if(isset($v['Item']['img_url'])) { ?><img class="img-responsive" style="max-height:200px; min-height:200px;" src="<?= $v['Item']['img_url'] ?>" alt=""><?php } ?>
+												<div class="caption" style="height:auto;">
+														<center><h1><?= $v['Item']['price'] ?><?php if($v['Item']['price'] == 1) { echo  ' '.$singular_money; } else { echo  ' '.$plural_money; } ?></h1></center>
+														<?php if($isConnected AND $Permissions->can('CAN_BUY')) { ?><button class="display-item btn btn-success btn-block btn-lg" data-item-id="<?= $v['Item']['id'] ?>"><?= $Lang->get('SHOP__BUY') ?></button> <?php } ?>
+												</div>
+										</div>
+								</div>
+						<?php } ?>
+					<?php } ?>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<?= $this->element('sidebar'); ?>
+	</div>
+</div>
 <script type="text/javascript">
     function affich_item(id) {
       $('#buy').modal();

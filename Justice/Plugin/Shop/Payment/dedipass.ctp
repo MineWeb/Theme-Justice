@@ -1,4 +1,5 @@
-  <div class="panel panel-default">
+<div class="container">  
+<div class="panel panel-default">
     <div class="panel-heading">
       <h1 class="panel-title">
         <?= $Lang->get('SHOP__DEDIPASS_PAYMENT') ?>
@@ -10,4 +11,5 @@
       </div>
     </div>
   </div>
+</div>
 <script src="//api.dedipass.com/v1/pay.js"></script>

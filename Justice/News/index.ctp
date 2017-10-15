@@ -1,4 +1,5 @@
-  <!-- Post -->
+<div class="container">
+<!-- Post -->
   <div class="panel panel-default">
     <div class="panel-heading">
       <h1 class="panel-title">
@@ -95,3 +96,4 @@
       $('#add-comment').addClass('disabled');
     }
 </script>
+</div>

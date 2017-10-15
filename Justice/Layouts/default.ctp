@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +22,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body>
     <div id="particles-js"></div>
@@ -39,14 +37,7 @@
 
     <!-- Main body -->
     <div class="main-content">
-        <div class="container-fluid">
-            <div class="col-lg-7 col-lg-offset-1">
-                <?= $this->fetch('content') ?>
-            </div>
-            <div class="col-lg-3">
-                <?= $this->element('sidebar') ?>
-            </div>
-        </div>
+				<?= $this->fetch('content') ?>
         <div class="container">
             <div class="text-centered copyright">
                 Fièrement propulsé par <a href="http://mineweb.org/">Mineweb</a>.<br>
