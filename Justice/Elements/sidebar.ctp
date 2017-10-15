@@ -16,36 +16,7 @@
     <?php } else { ?>
       <div class="alert alert-danger"><?= $Lang->get('SHOP__BUY_ERROR_NEED_LOGIN') ?></div>
     <?php } ?>
-<?php } if ($theme_config['vote-sidebar'] > 0){ ?>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h1 class="panel-title uppercase text-centered">
-            <i class="fa fa-star"></i> Meilleurs voteurs <i class="fa fa-star"></i>
-        </h1>
-    </div>
-    <div class="panel-body">
-        <?php $ranking = ClassRegistry::init('User')->find('all', array('limit' => $theme_config['vote-sidebar'], 'order' => 'vote desc')); ?>
-        <?php foreach ($ranking as $rank => $value):
-        ?>
-        <div class="media">
-          <div class="media-left">
-              <img class="avatar noresp" src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin/', 'plugin' => false)) ?>/<?= $value['User']['pseudo'] ?>/64" >
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">#<?= $rank + 1 ?> - <?= $value['User']['pseudo'] ?></h4>
-            <?= $value['User']['vote'] ?> votes
-          </div>
-        </div>
-        <?php endforeach; ?>
-        <hr>
-        <p class="text-centered">Votez pour le serveur et recevez des récompenses !</p>
-        <a class="btn btn-danger btn-block btn-custom uppercase" href="/vote">Voter</a>
-    </div>
-</div>
 <?php } ?>
-<?php if($EyPlugin->isInstalled("phpierre.forum.48")): ?>
-
-<?php endif; ?>
 <?php if (!empty($findSocialButtons)){
   foreach ($findSocialButtons as $key => $value) {
     echo '<a target="_blank" class="btn btn-custom btn-default btn-block" style="background-color:'.$value['SocialButton']['color'].'" href="'.$value['SocialButton']['url'].'">';
