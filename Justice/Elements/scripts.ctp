@@ -1,5 +1,4 @@
 <?php $search_slider = ClassRegistry::init('Slider')->find('all'); ?>
-
 <script>
 
 $(function($) {
@@ -22,7 +21,7 @@ $(function($) {
         animateHeight: false
     });
     <?php if($theme_config['particles-enabled'] == "true"): ?>
-				particlesJS.load('particles-js', '/theme/Justice/css/particles.css', function() {
+				particlesJS.load('particles-js', '<?= $this->webroot; ?>theme/Justice/css/particles.css', function() {
 					console.log('callback - particles.js config loaded');
 				});
     <?php endif; ?>	
@@ -33,14 +32,11 @@ $(function($) {
 });
 
 $(".login-avatar, .avatar").hide();
-
 $("img:not([class~='noresp'])").addClass("img-responsive");
 $(window).on('load', function(){
-	
 	/* Fade avatar */
 	 $(".login-avatar, .avatar").each(function(i){
 		 $(this).fadeIn(1000);
 	 });
-	
 })
 </script>

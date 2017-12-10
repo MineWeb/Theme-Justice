@@ -1,31 +1,30 @@
 {
-	"name": "Justice"
-	, "slug": "Justice"
-	, "author": "MrSheepSheep"
-	, "version": "1.4.0"
-	, "apiID": -1
-	, "slider": true
-	, "configurations": {
-		"favicon_url": ""
-		, "news_split": "2000"
-		, "nav-color": "#ba2222"
-		, "cgu_register": ""
-		, "particles-enabled": "true"
-		, "footer_text": "<p>2017 - Tous droits r&eacute;serv&eacute;s</p>"
-		, "discordId": ""
-		, "vote-sidebar": "3"
-		, "sidebar-stats": "true"
-		, "sidebar_code": ""
-		, "ip": "<p>votre.ip.ici</p>"
-		, "text-slide": "true"
-		, "unslider-animation": "vertical"
-		, "vegas-overlay": "05"
-		, "vegas-transition": "slideLeft"
-		, "loader": "true"
-		, "gifloader": "https://i.imgur.com/SQCCuoO.gif"
-		, "particles-compatibility": "true"
-		, "logo": false
-	}
-	, "supported": {
-	}
+    "name": "Justice",
+    "slug": "Justice",
+    "author": "MrSheepSheep",
+    "version": "1.4.1",
+    "apiID": -1,
+    "slider": true,
+    "configurations": {
+        "favicon_url": "",
+        "news_split": "2000",
+        "nav-color": "#c54c12",
+        "cgu_register": "",
+        "particles-enabled": "true",
+        "footer_text": "<p>2017 - Tous droits r&eacute;serv&eacute;s<\/p>",
+        "discordId": "",
+        "vote-sidebar": "2",
+        "sidebar-stats": "true",
+        "sidebar_code": "<p>Html suppl&eacute;mentaire<\/p>",
+        "ip": "<p>votre.ip.icij<\/p>",
+        "text-slide": "true",
+        "unslider-animation": "horizontal",
+        "vegas-overlay": "05",
+        "vegas-transition": "slideLeft",
+        "loader": "true",
+        "gifloader": "https:\/\/i.imgur.com\/SQCCuoO.gif",
+        "particles-compatibility": "true",
+        "logo": false
+    },
+    "supported": {}
 }
