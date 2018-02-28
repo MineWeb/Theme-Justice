@@ -283,3 +283,7 @@ input {
         text-align: center;
     }
 }
+
+div.staff-container .panel-heading {
+  color: #333 !important;
+}
