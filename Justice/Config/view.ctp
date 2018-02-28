@@ -20,7 +20,7 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 						<li><a href="#tab_sidebar" data-toggle="tab">Sidebar</a></li>
 						<li><a href="#tab_slider" data-toggle="tab">Slider</a></li>
 						<li><a href="#tab_other" data-toggle="tab">Autres options</a></li>
-						<li class="pull-right">	<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Sauvegarder</button></li>
+						<li class="pull-right">	<button type="submit" data-toggle="tooltip" data-placement="top" title="Si le bouton ne fonctionne pas, c'est que vous avez oublié de remplir un paramètre." class="btn btn-success"><i class="fa fa-save"></i> Sauvegarder</button></li>
 					</ul>
 					<div class="tab-content" style="padding: 15px;">
 						<div class="tab-pane active" id="tab_general">
@@ -158,22 +158,41 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 											</script>
 											<textarea class="form-control" id="ip" name="ip" cols="30" rows="10"><?= $config['ip']; ?></textarea>
 									</div>
-								</div>
-								<div class="col-md-6">
-										<div class="form-group">
-											<label>Activer le texte du Header</label>
-											<p>Affiche ou non le sous-titre défini sur un Slider.</p>
-											<select name="text-slide" class="form-control">
-												<option value="true"<?= ($theme_config['text-slide'] == "true") ? ' selected' : '' ?>>Oui</option>
-												<option value="false"<?= ($theme_config['text-slide'] == "false") ? ' selected' : '' ?>>Non</option>
-											</select>
+									<div class="form-group">
+									    <label>Vidéo (expérimental)</label>
+										<p>Lien d'une vidéo à afficher dans le slider, au format MP4, WEBM ou OGV.</p>
+										<input type="text" class="form-control" name="slider-video" value="<?= $config['slider-video'] ?>">
 									</div>
 									<div class="form-group">
-											<label>Animation du texte du Header</label>
-											<select name="unslider-animation" class="form-control">
-												<option value="horizontal"<?= ($theme_config['unslider-animation'] == "horizontal") ? ' selected' : '' ?>>Horizontal</option>
+									    <label>Durée de la vidéo (en secondes).</label>
+										<p>Permet de passer aux slides après la vidéo, en mode "Vidéo et slider".</p>
+										<input placeholder="Remplissez même si inutilisé." type="number" required="required" class="form-control" min="0" name="slider-video-length" value="<?= $config['slider-video-length'] ?>">
+									</div>
+									<div class="form-group">
+										<label>Comportement du slider</label>
+										<p>"Vidéo et slider" affichera la vidéo en premier, puis les sliders configurés.</p>
+										<p>"Vidéo uniquement" affichera la vidéo en boucle <b>sur ordinateur</b>. Si la vidéo ne peut pas charger, le premier slider sera affiché (les sous-titres des autres sliders défileront). <br><b>Sur mobile</b>, le premier slider sera affiché.</p>
+										<select name="slider-video-loop" class="form-control">
+											<option value="false"<?= ($theme_config['slider-video-loop'] == "false") ? ' selected' : '' ?>>Vidéo et slider</option>
+											<option value="true"<?= ($theme_config['slider-video-loop'] == "true") ? ' selected' : '' ?>>Vidéo uniquement</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+								    <div class="form-group">
+										<label>Activer le texte du Header</label>
+										<p>Affiche ou non le sous-titre défini sur un Slider.</p>
+										<select name="text-slide" class="form-control">
+											<option value="true"<?= ($theme_config['text-slide'] == "true") ? ' selected' : '' ?>>Oui</option>
+											<option value="false"<?= ($theme_config['text-slide'] == "false") ? ' selected' : '' ?>>Non</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label>Animation du texte du Header</label>
+										<select name="unslider-animation" class="form-control">
+											<option value="horizontal"<?= ($theme_config['unslider-animation'] == "horizontal") ? ' selected' : '' ?>>Horizontal</option>
 											<option value="vertical"<?= ($theme_config['unslider-animation'] == "vertical") ? ' selected' : '' ?>>Vertical</option>
-											</select>
+										</select>
 									</div>
 									<div class="form-group">
 											<label>Overlay du slider</label>
@@ -266,12 +285,12 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
           <h3 class="box-title">Changelog</h3>
           <div class="box-tools pull-right">
             <span class="label label-primary">
-							<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
-								<?php if ($theme->name == "Justice"): ?>
-									<?= $theme->version; ?>
-								<?php break; endif; ?>
-							<?php endforeach; ?>
-						</span>
+				<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
+					<?php if ($theme->name == "Justice"): ?>
+						<?= $theme->version; ?>
+					<?php break; endif; ?>
+				<?php endforeach; ?>
+			</span>
           </div>
         </div>
         <div class="box-body">
