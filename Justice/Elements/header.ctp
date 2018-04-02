@@ -6,11 +6,11 @@
             </div>
             <div class="blackbox">
                 <span class="online">
-									<?php if($banner_server): ?>
-                    <?= $banner_server; ?>
-									<?php else: ?>
-									  <?= $Lang->get('SERVER__STATUS_OFF'); ?>
-									<?php endif; ?>
+					<?php if($banner_server): ?>
+                        <?= $banner_server; ?>
+					<?php else: ?>
+					  <?= $Lang->get('SERVER__STATUS_OFF'); ?>
+					<?php endif; ?>
                 </span>
             </div>
         </div>
@@ -22,7 +22,7 @@
         <div class="col-lg-3 servstats">
             <?php if(!$isConnected) { ?>
             <div class="blackbox">
-                <img class="login-avatar avatar img-responsive" src="https://crafatar.com/avatars/Steve">
+                <?= $this->Html->image('Steve.png', array('class' => 'login-avatar avatar img-responsive')); ?>
                 <div class="login-username">Bienvenue, visiteur !</div>
             </div>
             <div class="quickbuttons">
