@@ -112,7 +112,7 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 												<option value="false"<?= ($theme_config['sidebar-stats'] == "false") ? ' selected' : '' ?>>Non</option>
 											</select>
 									</div>
-									<?php if($EyPlugin->isInstalled('phpierre.forum.48') && false): ?>
+									<?php if($EyPlugin->isInstalled('phpierre.forum') && false): ?>
 									<div class="form-group">
 										<label>Derniers topics du forum</label>
 										<p>Ne fonctionne que si le plugin Forum est installé. Choisissez le nombre de topics du forum (les plus récents) à afficher. Mettez 0 pour désactiver.</p>
