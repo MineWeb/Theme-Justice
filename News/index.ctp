@@ -10,7 +10,7 @@
         <?= $news['News']['content'] ?>
     </div>
     <div class="panel-footer">
-      <img class="img-responsive" style="display:inline-block;" src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin/', 'plugin' => false)) ?>/<?= $news['News']['author'] ?>/25" title="<?= $news['News']['author'] ?>"> <?= $Lang->get('GLOBAL__BY') ?> <?= $news['News']['author'] ?>, le <?= $Lang->date($news['News']['created']); ?>
+      <img class="img-responsive" style="display:inline-block;" src="/API/get_head_skin/<?= $news['News']['author'] ?>/25" title="<?= $news['News']['author'] ?>"> <?= $Lang->get('GLOBAL__BY') ?> <?= $news['News']['author'] ?>, le <?= $Lang->date($news['News']['created']); ?>
     <button id="<?= $news['News']['id'] ?>" type="button" class="pull-right like btn btn-success<?= ($news['News']['liked']) ? ' active' : '' ?>"<?= (!$Permissions->can('LIKE_NEWS')) ? ' disabled' : '' ?>><?= $news['News']['count_likes'] ?> <i class="fa fa-thumbs-up"></i></button>
 			<div class="clearfix"></div>
     </div>
