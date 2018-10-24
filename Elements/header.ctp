@@ -27,8 +27,13 @@
             </div>
             <div class="quickbuttons">
                 <div class="btn-group btn-group-justified">
-                  <a href="#login" type="button" data-toggle="modal" class="btn btn-default"><?= $Lang->get('USER__LOGIN') ?></a>
-                  <a href="#register" type="button" data-toggle="modal" class="btn btn-default"><?= $Lang->get('USER__REGISTER') ?></a>
+                    <?php if($EyPlugin->isInstalled('phpierre.signinup')) { ?>
+                        <a href="/login" type="button" class="btn btn-default"><?= $Lang->get('USER__LOGIN') ?></a>
+                        <a href="/register" type="button" class="btn btn-default"><?= $Lang->get('USER__REGISTER') ?></a>
+                    <?php } else { ?>
+                        <a href="#login" type="button" data-toggle="modal" class="btn btn-default"><?= $Lang->get('USER__LOGIN') ?></a>
+                        <a href="#register" type="button" data-toggle="modal" class="btn btn-default"><?= $Lang->get('USER__REGISTER') ?></a>
+                    <?php } ?>
                 </div>
             </div>
             <?php } else { ?>
