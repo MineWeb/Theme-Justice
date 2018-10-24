@@ -163,13 +163,13 @@
               </div>
             </div>
           <?php } ?>
-					<?php if($theme_config['cgu_register'] != ''): ?>
+	<?php if (!empty($condition)) { ?>
             <div class="form-group">
-							<div class="checkbox col-sm-12 col-sm-offset-2">
-									  <label><input type="checkbox" value="" required>J'ai lu et j'accepte les <a href="<?= $theme_config['cgu_register'] ?>">conditions d'utilisation</a> du serveur.</label>
-							</div>
+		<div class="checkbox col-sm-12 col-sm-offset-2">
+			<label><input type="checkbox" name="condition">J'ai lu et j'accepte les <a href="<?= $theme_config['cgu_register'] ?>">conditions d'utilisation</a> du serveur.</label>
+		</div>
             </div>
-					<?php endif; ?>
+	<?php } ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?= $Lang->get('GLOBAL__CLOSE') ?></button>
