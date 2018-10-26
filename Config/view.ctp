@@ -52,12 +52,6 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 										</select>
 									</div>
 									<div class="form-group">
-										<label>Conditions d'utilisation</label>
-										<p>Entrez ici l'URL de vos conditions d'utilisation qui devront être acceptées lors de l'inscription.</p>
-										<p>Laissez vide pour désactiver.</p>
-										<input type="text" class="form-control" name="cgu_register" placeholder="Désactivé" value="<?= $config['cgu_register'] ?>">
-									</div>
-									<div class="form-group">
 											<label>Particules</label>
 											<p>Activer ou non les particules.</p>
 											<p>Vous pouvez créer vos propres particules <a href="http://vincentgarreau.com/particles.js/">ICI</a>.</p>

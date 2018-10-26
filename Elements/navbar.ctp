@@ -20,11 +20,21 @@
                       foreach ($nav as $key => $value) { ?>
                         <?php if(empty($value['Navbar']['submenu'])) { ?>
                           <li class="li-nav">
-                              <a href="<?= $value['Navbar']['url'] ?>"><?= $value['Navbar']['name'] ?></a>
+                              <a href="<?= $value['Navbar']['url'] ?>">
+                                <?php if(!empty($value['Navbar']['icon'])): ?>
+									<i class="fa fa-<?= $value['Navbar']['icon'] ?>"></i>
+								<?php endif; ?>
+                              <?= $value['Navbar']['name'] ?>
+                              </a>
                           </li>
                         <?php } else { ?>
                           <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $value['Navbar']['name'] ?> <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <?php if(!empty($value['Navbar']['icon'])): ?>
+								<i class="fa fa-<?= $value['Navbar']['icon'] ?>"></i>
+							<?php endif; ?>
+                            <?= $value['Navbar']['name'] ?>
+                            <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                             <?php
                             $submenu = json_decode($value['Navbar']['submenu']);

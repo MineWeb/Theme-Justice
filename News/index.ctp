@@ -72,7 +72,6 @@
     $(".comment-delete").click(function() {
         comment_delete(this);
     });
-
     function comment_delete(e) {
       var inputs = {};
       var id = $(e).attr("id");
@@ -86,7 +85,6 @@
           }
         });
     }
-
     function addcomment(data) {
       var d = new Date();
       var comment = '<h4><img src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin/')) ?>/<?= $user['pseudo'] ?>/32" alt=""> <?= $user['pseudo']; ?><small>, à '+ d.getHours()+'h'+d.getMinutes()+'</small></h4><blockquote>'+data['content']+'</blockquote>';
