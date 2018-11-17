@@ -10,7 +10,6 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 ?>
 
 <section class="content">
-	<div class="callout callout-danger"><h4><i class="fa fa-copyright"></i> Rappel</h4>Il est interdit de modifier les crédits du footer. Votre licence sera suspendue si vous le faites.</div>
 	<div class="row">
 		<form method="post" enctype="multipart/form-data" data-ajax="false">
 			<div class="col-md-12">
