@@ -5,7 +5,7 @@
       <div class="panel panel-default">
         <div class="panel-heading"><h1 class="panel-title"><i class="fa fa-shopping-cart"></i> Mon compte</h1></div>
         <div class="panel-body">
-          <p><?= $Lang->get('SHOP__MONEY_CURRENTLY') ?>: <?= $money ?> <?= $Configuration->getMoneyName(); ?></p>
+          <p><?= $Lang->get('SHOP__MONEY_CURRENTLY') ?>: <?= $money; ?></p>
           <?php if($Permissions->can('CREDIT_ACCOUNT')){ ?>
             <br>
             <a href="#" data-toggle="modal" data-target="#addmoney" class="btn btn-block btn-primary btn-lg"><?= $Lang->get('SHOP__ADD_MONEY') ?></a>
