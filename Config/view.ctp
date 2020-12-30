@@ -27,10 +27,6 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 							<div class="row">
 								<div class="col-md-4">
 									<div class="form-group">
-										<label><?= $Lang->get('THEME__FAVICON_URL') ?></label>
-										<input type="text" class="form-control" name="favicon_url" value="<?= $config['favicon_url'] ?>">
-									</div>
-									<div class="form-group">
 										<label>Limite d'affichage d'une news</label>
 										<p>La longueur maximale d'une news quand elle est affichée sur l'accueil.</p>
 										<p>La valeur par défaut est <code>2000</code>.
