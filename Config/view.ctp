@@ -15,10 +15,10 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 			<div class="col-md-12">
 				<div class="nav-tabs-custom">
 					<ul class="nav nav-tabs">
-						<li class="active"><a href="#tab_general" data-toggle="tab">Options générales</a></li>
-						<li><a href="#tab_sidebar" data-toggle="tab">Sidebar</a></li>
-						<li><a href="#tab_slider" data-toggle="tab">Slider</a></li>
-						<li><a href="#tab_other" data-toggle="tab">Autres options</a></li>
+						<li class="active"><a href="#tab_general" class="nav-link text-dark" data-toggle="tab">Options générales</a></li>
+						<li><a href="#tab_sidebar" class="nav-link text-dark" data-toggle="tab">Sidebar</a></li>
+						<li><a href="#tab_slider" class="nav-link text-dark" data-toggle="tab">Slider</a></li>
+						<li><a href="#tab_other" class="nav-link text-dark" data-toggle="tab">Autres options</a></li>
 						<li class="pull-right">	<button type="submit" data-toggle="tooltip" data-placement="top" title="Si le bouton ne fonctionne pas, c'est que vous avez oublié de remplir un paramètre." class="btn btn-success"><i class="fa fa-save"></i> Sauvegarder</button></li>
 					</ul>
 					<div class="tab-content" style="padding: 15px;">
@@ -64,7 +64,7 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 											<script type="text/javascript">
 											tinymce.init({
 													selector: "#footer_text",
-													height : 100,
+													height : 300,
 													width : '100%',
 													language : 'fr_FR',
 													plugins: "textcolor code image link",
@@ -116,7 +116,7 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 										<script type="text/javascript">
 										tinymce.init({
 												selector: "#sidebar_code",
-												height : 100,
+												height : 300,
 												width : '100%',
 												language : 'fr_FR',
 												plugins: "textcolor code image link",
@@ -138,7 +138,7 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 										<script type="text/javascript">
 											tinymce.init({
 													selector: "#ip",
-													height : 100,
+													height : 300,
 													width : '100%',
 													language : 'fr_FR',
 													plugins: "textcolor code image link",
@@ -269,10 +269,10 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 	</div>
 	<div class="row">
 		<div class="col-md-4">
-			<div class="box box-success">
-        <div class="box-header with-border">
-          <h3 class="box-title">Changelog</h3>
-          <div class="box-tools pull-right">
+			<div class="card card-success">
+        <div class="card-header with-border">
+          <h3 class="card-title">Changelog</h3>
+          <div class="card-tools pull-right">
             <span class="label label-primary">
 				<?php foreach ($Theme->getThemesInstalled() as $theme): ?>
 					<?php if ($theme->name == "Justice"): ?>
@@ -282,32 +282,32 @@ echo $this->Html->script('admin/tinymce/tinymce.min.js');
 			</span>
           </div>
         </div>
-        <div class="box-body">
+        <div class="card-body">
           <?= file_get_contents("../View/Themed/Justice/Config/changelog.html"); ?>
         </div>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="box box-warning">
-        <div class="box-header with-border">
-          <h3 class="box-title">Une question ?</h3>
+			<div class="card card-warning">
+        <div class="card-header with-border">
+          <h3 class="card-title">Une question ?</h3>
         </div>
-        <div class="box-body">
+        <div class="card-body">
           Contactez MrSheepSheep sur le Discord de Mineweb en message privé ou dans le salon <b>#support</b>.
         </div>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="box box-warning">
-        <div class="box-header with-border">
-          <h3 class="box-title">Bugs connus</h3>
-					<div class="box-tools pull-right">
+			<div class="card card-warning">
+        <div class="card-header with-border">
+          <h3 class="card-title">Bugs connus</h3>
+					<div class="card-tools pull-right">
             <a href="https://gitlab.com/mrsheepsheep/Justice/issues" class="label label-danger">
 							Signaler un bug
 						</a>
 					</div>
         </div>
-        <div class="box-body" id="issues">
+        <div class="card-body" id="issues">
           <?= json_decode(file_get_contents('https://gitlab.com/mrsheepsheep/Justice/issues.json'), true)['html']; ?>
 					<small>Les nouveaux bugs non résolus apparaîtront ici.</small>
         </div>
